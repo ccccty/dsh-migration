@@ -1,0 +1,126 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: cccty-vision
+    model: kimi-k3
+- id: ui-settings-account
+  name: "@deepseek-ai/dsh-client-ui-settings-account"
+  config:
+    version: 1
+    step: done
+    purpose: both
+    process: detailed
+    completion: completed
+    usage: detailed
+    developerTools: true
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    transcriptView: detailed
+    performanceUsage: detailed
+- id: ui-settings
+  name: "@deepseek-ai/dsh-client-ui-settings"
+  config:
+    enabled: true
+- id: locale
+  name: "@deepseek-ai/dsh-client-locale"
+  config:
+    preference: zh
+- id: permission
+  name: "@deepseek-ai/dsh-permission-presets"
+  config:
+    presets:
+      read-only:
+        sandbox: read-only
+        approval: ask
+      workspace-write:
+        sandbox: workspace-write
+        approval: ask
+      danger-full-access:
+        sandbox: danger-full-access
+        approval: never
+    defaultPreset: danger-full-access
+- id: session-log-deepseek
+  name: "@deepseek-ai/dsh-session-log-deepseek"
+  config:
+    enabled: false
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      cccty:
+        apiKeyEnv: CCCTY_API_KEY
+        api: openai-completions
+        baseURL: https://free-router.opendatalab.com/v1
+        models:
+          - id: deepseek-v4-flash-beta
+            name: deepseek-v4-flash-beta
+          - id: deepseek-v4-pro
+            name: deepseek-v4-pro
+          - id: bailian/deepseek-v4-pro
+            name: bailian/deepseek-v4-pro
+          - id: bailian/deepseek-v4-flash
+            name: bailian/deepseek-v4-flash
+          - id: kimi-k3
+            name: kimi-k3
+          - id: glm-5v-turbo
+            name: glm-5v-turbo
+          - id: glm-5-turbo
+            name: glm-5-turbo
+          - id: glm-5.3-flash
+            name: glm-5.3-flash
+          - id: bailian/deepseek-v4.1-flash
+            name: bailian/deepseek-v4.1-flash
+          - id: qwen-image-2.0-pro
+            name: qwen-image-2.0-pro
+          - id: qwen-image-2.0
+            name: qwen-image-2.0
+- id: web-ui-pet
+  name: "@linxin666/dsh-pet"
+  config:
+    visible: false
+    size: 160
+    right: 122
+    bottom: 158
+    petId: whale-girl-refined
+- id: web-ui-skin-center
+  name: "@linxin666/dsh-client-ui-skin-center"
+  config:
+    skin-custom-theme:
+      applied: true
+- id: ui-theme
+  name: "@deepseek-ai/dsh-client-ui-theme"
+  config:
+    preference: light
+- id: web-search-free
+  name: dsh-free-search
+  config:
+    provider: multi
+    disabledEngines: []
+    bingMarket: zh-CN
+- id: vision-router
+  name: dsh-vision-router
+  config:
+    progressiveTools: false
+    onboardingSeen: true
+- id: image-gen
+  name: dsh-image-gen
+  config:
+    provider: openai-compat
+    openaiCompatBaseURL: https://free-router.opendatalab.com/v1
+    openaiCompatModel: qwen-image-2.0
+    openaiCompatQuality: ""
+    openaiCompatQualityOptions:
+      - auto
+      - low
+      - medium
+      - high
+    openaiCompatExtraBody: {}
+    openaiCompatEditSizeMode: auto
+    openaiCompatEditFormat: formReferenceImages
+    openaiCompatEditExtra: {}
+    openaiCompatSizes: {}
+    showProviderPill: true

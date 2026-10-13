@@ -1,0 +1,98 @@
+% !TeX program = xelatex
+% ================================================================
+% IEEEtran 中文会议论文模板（论文生成技能配套骨架）
+% 编译：Tectonic -X compile main.tex（或 Overleaf XeLaTeX）
+% 使用：全文替换占位内容；fig\ 子目录放图；保持每个 \label 唯一
+% ================================================================
+
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{url}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\begin{document}
+
+\title{论文标题：方法名与任务写全}
+
+\author{
+\IEEEauthorblockN{作者一, 作者二, 作者三}
+\IEEEauthorblockA{
+\textit{学院或实验室名称} \\
+\textit{单位名称}\\
+城市, 中国 \\
+email@example.com}
+}
+
+\maketitle
+
+\begin{abstract}
+背景痛点两句。针对挑战一、挑战二、挑战三，本文提出方法名。方法模块按数据流各一句。在XX数据集上，本方法$mAP$达到XX.X\%，较最强基线提升X.X个百分点，较单模态/传统基线提升X.X个百分点。一句收束说明哪个机制被验证有效。
+\end{abstract}
+
+\begin{IEEEkeywords}
+关键词一，关键词二，关键词三，关键词四，关键词五
+\end{IEEEkeywords}
+
+\section{引言}
+% 应用领域 → 现有路线痛点 → 难点分析 → 数据集/基准背景 → 思想来源 → 贡献列表
+本文主要贡献如下：
+\begin{itemize}
+    \item 贡献一：做了什么，解决什么。
+    \item 贡献二：……
+    \item 贡献三：……
+\end{itemize}
+
+\section{相关工作}
+\subsection{方向一}
+% 每小节末句收束到"还缺什么、本文补什么"
+\subsection{方向二}
+
+\section{数据集与问题定义}
+\subsection{数据集}
+\subsection{任务定义}
+% 形式化：输入、输出、目标函数
+
+\section{方法}
+\subsection{总体结构}
+% figure* 架构图
+\subsection{模块一}
+% 动机一句 → 公式 → 设计理由
+\subsection{模块二}
+\subsection{损失函数}
+
+\section{实验与结果分析}
+\subsection{实验设置}
+\subsection{评价指标}
+\subsection{总体性能比较}
+% table* 主表：基线行用官方值，本方法行加粗；表注写明 ↑↓ 与加粗约定
+\subsection{消融实验}
+% 基线 < 单模块 < 组合 < 完整；参数量列自洽
+\subsection{复杂环境/鲁棒性分析}
+\subsection{定性分析}
+
+\section{讨论}
+\subsection{与最强基线的路线差异}
+\subsection{局限性}
+
+\section{结论}
+% 方法两句复述 + 头条数字 + 未来工作
+
+\begin{thebibliography}{00}
+\bibitem{b1} 第一作者 et al., ``标题,'' \textit{期刊/会议}, 年.
+\end{thebibliography}
+
+\end{document}
